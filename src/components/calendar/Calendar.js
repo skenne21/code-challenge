@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as calendarInfo from '../../data.js';
+import Header from '../header/Header.js';
 // import PropTypes from 'prop-types';
 
 class Calendar extends Component {
@@ -9,7 +10,7 @@ class Calendar extends Component {
       year: '',
       month: '',
       dayOfWeek: '',
-
+      monthName: ''
     }
 
   }
@@ -17,6 +18,7 @@ class Calendar extends Component {
   componentDidMount = async () => {
     await this.setCalendar();
     await this.getYearInfo();
+    await this.determineMonth();
   }
 
   setCalendar = () => {
@@ -42,13 +44,20 @@ class Calendar extends Component {
     this.setState({ wholeMonth })
   }
 
+  determineMonth = () => {
+    const { month } = this.state;
+    const monthName = calendarInfo.months[month];
+    this.setState({ monthName })
+  }
+
   render() {
-    const { month, year } = this.state;
-    console.log(calendarInfo.months)
+    const { month, year, monthName } = this.state;
+    
     return(
       <div className="Calendar">
         <Header
-
+          name={ monthName }
+          year={ year }
         >
           
         </Header>
