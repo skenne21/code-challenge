@@ -44,7 +44,7 @@ class Calendar extends Component {
         dayOfWeek: settingEachDay.getDay(),
         dateOfDay: settingEachDay.getDate()
       };
-      
+
       wholeMonth.push(eachDay);
       date.setDate(date.getDate() + 1);
     }
@@ -60,22 +60,23 @@ class Calendar extends Component {
 
   createWeeks = () => {
     const { wholeMonth } = this.state;
-    this.state.wholeMonth.filter(day => console.log(day))
-    calendarInfo.days.map(( day, index) => {
-      <div
-        className="weekDay"
-        key={ day+index }
-      >
-        <WeekDay
-          dayOfWeek={
-            wholeMonth.filter(day => console.log(day))
-          }
-          
-        >
-        </WeekDay>
-      </div>
 
-    })
+    const settingCalendar = calendarInfo.days.map(( day, index) => {
+      return (
+        <div
+          className="weekDay"
+          key={ day+index }
+        >
+          <WeekDay
+            dayOfWeek={ wholeMonth.filter(day => day.dayOfWeek === index)}
+            day={day} 
+          >
+          </WeekDay>
+       </div>
+      );
+    });
+
+    return settingCalendar;
   }
 
   render() {
