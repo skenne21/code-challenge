@@ -15,6 +15,6 @@ cd into the directory and run npm install
 
 Lastly, npm start will start the application on your localhost.
 
-###Thank you
+### Thank you
 
-Thank you so very much for your consideration. I enjoyed working on this code challenge and please let me know if you have any further questions or feedback on  my submission.
+Thank you so very much for your consideration and Time. I enjoyed working on this code challenge and please let me know if you have any further questions or feedback on  my submission. I look forward from hearing from you.
