@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as calendarInfo from '../../data.js';
 // import PropTypes from 'prop-types';
 
 class Calendar extends Component {
@@ -34,16 +35,25 @@ class Calendar extends Component {
     const wholeMonth = [];
 
     while (date.getMonth() === month) {
-        wholeMonth.push(new Date(date));
-        date.setDate(date.getDate() + 1);
+      wholeMonth.push(new Date(date));
+      date.setDate(date.getDate() + 1);
     }
 
     this.setState({ wholeMonth })
   }
 
   render() {
+    const { month, year } = this.state;
+    console.log(calendarInfo.months)
     return(
-      <div>Works</div>
+      <div className="Calendar">
+        <Header
+
+        >
+          
+        </Header>
+
+      </div>
     )
   }
 }
