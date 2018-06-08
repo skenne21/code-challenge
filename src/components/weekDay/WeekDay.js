@@ -4,28 +4,25 @@ import './styles.css';
 
 const WeekDay = ({ dayOfWeek, day, month, holidays }) => {
   
+
+  // this method creates a day for each day in the weekDay
   const createDays = () => {
     
+    // If the dayOfWeek array does not start with the this first day of the month empty days are created to make the calendar fill the right order
     if (dayOfWeek.length) {
       if(dayOfWeek[0].dayOfWeek < 5) {
-        console.log(dayOfWeek)
         const emptyDay = {
           dayOfWeek: dayOfWeek[0].dayOfWeek,
           dateOfDay: ' '
         }
         
+        // the empty day is added to the array to create an extra day for the week. 
         dayOfWeek.unshift(emptyDay);
       }
     }
     
     return dayOfWeek.map( (day, index) => {
-      
-      let firstDay;
-
-      if (day.dateOfDay === 1) {
-        firstDay = day.dayOfWeek;
-      }
-
+      // each day in the week is looped over and creates a new day for the calendar
       return (
         <Day
           key={ index }
@@ -37,6 +34,7 @@ const WeekDay = ({ dayOfWeek, day, month, holidays }) => {
     })
   }
 
+  // this method determines if a holiday is associated with the day of the week
   const determineHoliday = (date) => {
     let holidayMonth = month+1;
     const currentHolidays = holidays.filter(holiday => holiday.month === holidayMonth)
