@@ -7,4 +7,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  -ms-align-items: ;
+  align-items: ;: flex-start;
 }

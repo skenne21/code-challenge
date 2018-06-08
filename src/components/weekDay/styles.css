@@ -9,3 +9,9 @@
   text-align: center;
 }
 
+.day-week {
+  font-style: bold;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E7E8EB;
+}
+

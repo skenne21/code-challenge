@@ -25,7 +25,7 @@ const WeekDay = ({ dayOfWeek, day, month, holidays }) => {
 
   return(
     <div className="WeekDay">
-      <h2>{ day }</h2>
+      <h2 className="day-week">{ day }</h2>
       { createDays() }
     </div>
   )
