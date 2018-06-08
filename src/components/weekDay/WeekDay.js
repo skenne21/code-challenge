@@ -1,5 +1,6 @@
 import React from 'react';
 import Day from '../day/Day.js';
+import './styles.css';
 
 const WeekDay = ({ dayOfWeek, day, month, holidays }) => {
   

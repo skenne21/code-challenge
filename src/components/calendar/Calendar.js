@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as calendarInfo from '../../data.js';
 import Header from '../header/Header.js';
 import WeekDay from '../weekDay/WeekDay.js';
+import './styles.css';
 // import PropTypes from 'prop-types';
 
 class Calendar extends Component {

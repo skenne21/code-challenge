@@ -1,0 +1,14 @@
+.Day {
+  border-bottom: 1px solid #E7E8EB;
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+}
+
+.Day p {
+  width: 100%;
+  background-color: #F7DDF5;
+}
+

@@ -1,0 +1,11 @@
+.weekDay {
+  border: 1px solid #E7E8EB;
+  width: 14%;
+  height: 100vh;
+  /*padding: 10px;*/
+}
+
+.weekDay h2 {
+  text-align: center;
+}
+
