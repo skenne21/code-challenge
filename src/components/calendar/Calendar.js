@@ -63,6 +63,7 @@ class Calendar extends Component {
     const { wholeMonth, month } = this.state;
 
     const settingCalendar = calendarInfo.days.map(( day, index) => {
+      
       return (
         <div
           className="weekDay"

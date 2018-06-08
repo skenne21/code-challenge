@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.css';
 
 const Day = ({ date, holiday }) => {
-  console.log(holiday)
   return(
     <div className="Day">
       <h3>{date}</h3>

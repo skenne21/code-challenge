@@ -5,7 +5,27 @@ import './styles.css';
 const WeekDay = ({ dayOfWeek, day, month, holidays }) => {
   
   const createDays = () => {
+    
+    if (dayOfWeek.length) {
+      if(dayOfWeek[0].dayOfWeek < 5) {
+        console.log(dayOfWeek)
+        const emptyDay = {
+          dayOfWeek: dayOfWeek[0].dayOfWeek,
+          dateOfDay: ' '
+        }
+        
+        dayOfWeek.unshift(emptyDay);
+      }
+    }
+    
     return dayOfWeek.map( (day, index) => {
+      
+      let firstDay;
+
+      if (day.dateOfDay === 1) {
+        firstDay = day.dayOfWeek;
+      }
+
       return (
         <Day
           key={ index }
