@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as calendarInfo from '../../data.js';
 import Header from '../header/Header.js';
+import WeekDay from '../weekDay/WeekDay.js';
 // import PropTypes from 'prop-types';
 
 class Calendar extends Component {
@@ -10,7 +11,8 @@ class Calendar extends Component {
       year: '',
       month: '',
       dayOfWeek: '',
-      monthName: ''
+      monthName: '',
+      wholeMonth: []
     }
 
   }
@@ -37,9 +39,11 @@ class Calendar extends Component {
     const wholeMonth = [];
 
     while (date.getMonth() === month) {
+      const settingEachDay
       wholeMonth.push(new Date(date));
       date.setDate(date.getDate() + 1);
     }
+
 
     this.setState({ wholeMonth })
   }
@@ -48,6 +52,26 @@ class Calendar extends Component {
     const { month } = this.state;
     const monthName = calendarInfo.months[month];
     this.setState({ monthName })
+  }
+
+  createWeeks = () => {
+    const { wholeMonth } = this.state;
+    this.state.wholeMonth.filter(day => console.log(day))
+    calendarInfo.days.map(( day, index) => {
+      <div
+        className="weekDay"
+        key={ day+index }
+      >
+        <WeekDay
+          dayOfWeek={
+            wholeMonth.filter(day => )
+          }
+          
+        >
+        </WeekDay>
+      </div>
+
+    })
   }
 
   render() {
@@ -59,9 +83,10 @@ class Calendar extends Component {
           name={ monthName }
           year={ year }
         >
-          
         </Header>
-
+        <section className="container">
+          { this.createWeeks() }
+        </section>
       </div>
     )
   }
