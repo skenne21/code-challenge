@@ -59,7 +59,7 @@ class Calendar extends Component {
   }
 
   createWeeks = () => {
-    const { wholeMonth } = this.state;
+    const { wholeMonth, month } = this.state;
 
     const settingCalendar = calendarInfo.days.map(( day, index) => {
       return (
@@ -69,7 +69,9 @@ class Calendar extends Component {
         >
           <WeekDay
             dayOfWeek={ wholeMonth.filter(day => day.dayOfWeek === index)}
-            day={day} 
+            day={ day }
+            month={ month }
+            holidays={ calendarInfo.holidays } 
           >
           </WeekDay>
        </div>

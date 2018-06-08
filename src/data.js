@@ -4,29 +4,36 @@ export const days = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export const holidays = [
   {
-    date: '06/06',
+    month: 6,
+    date: 6,
     holiday: 'D-Day'
 
   },{
-    date: '06/14',
+    month: 6,
+    date: 14,
     holiday: 'Flag Day'
 
   },{
-    date: '06/17',
+    month: 6,
+    date: 17,
     holiday: 'Fathers Day'
 
   },{
-    date: '06/21',
+    month: 6,
+    date: 21, 
     holiday: 'Summers Solstice'
 
   },{
-    date: '07/01',
+    month: 7,
+    date: 1, 
     holiday: 'Canada Day'
   }, {
-    date: '07/04',
+    month: 7,
+    date: 4, 
     holiday: 'Independence Day'
   },{
-    date: '07/13',
+    month: 7,
+    date: 13,
     holiday: 'Friday the 13th'
   }   
 ];

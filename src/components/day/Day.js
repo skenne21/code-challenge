@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Day = () => {
+const Day = ({ date, holiday }) => {
   return(
-    <div></div>
+    <div>
+      
+    </div>
   )
 }
 
