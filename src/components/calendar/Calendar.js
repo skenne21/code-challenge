@@ -39,11 +39,15 @@ class Calendar extends Component {
     const wholeMonth = [];
 
     while (date.getMonth() === month) {
-      const settingEachDay
-      wholeMonth.push(new Date(date));
+      const settingEachDay = new Date(date);
+      const eachDay = {
+        dayOfWeek: settingEachDay.getDay(),
+        dateOfDay: settingEachDay.getDate()
+      };
+      
+      wholeMonth.push(eachDay);
       date.setDate(date.getDate() + 1);
     }
-
 
     this.setState({ wholeMonth })
   }
@@ -64,7 +68,7 @@ class Calendar extends Component {
       >
         <WeekDay
           dayOfWeek={
-            wholeMonth.filter(day => )
+            wholeMonth.filter(day => console.log(day))
           }
           
         >
